@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.suggestions, .recent-searches {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.suggestions div, .recent-searches div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover, .recent-searches div:hover {
+    background-color: #f0f0f0;
+}
+
+.car-categories {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.car-categories button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.categories-list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 200px;
+    z-index: 1;
+}
+
+.categories-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories-list ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.categories-list ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.car-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car-grid .car {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.car-grid .car img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.car-grid .car:hover {
+    transform: scale(1.05);
+}
+
+.car-grid .car button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
