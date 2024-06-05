@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-$cars = json_decode(file_get_contents('car-rental-system/data/cars.json'), true);
+$cars = json_decode(file_get_contents('../data/cars.json'), true);
 
 // Assign unique IDs to each car if not already present
 foreach ($cars as $index => &$car) {

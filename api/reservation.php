@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('car-rental-system/db/config.php');
+include('../db/config.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $carId = $_POST['carId'];
@@ -26,6 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'price' => $price
     ];
 
-    header('Location: car-rental-system/confirm.php');
+    header('Location: ../confirm.php');
 }
 ?>
