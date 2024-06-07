@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "type": "sedan",
         "brand": "Toyota",
         "model": "Camry",
@@ -13,6 +14,7 @@
         "description": "A comfortable and reliable sedan."
     },
     {
+        "id": 2,
         "type": "sedan",
         "brand": "Honda",
         "model": "Accord",
@@ -26,6 +28,7 @@
         "description": "A stylish and efficient sedan."
     },
     {
+        "id": 3,
         "type": "SUV",
         "brand": "Nissan",
         "model": "X-Trail",
@@ -39,6 +42,7 @@
         "description": "A robust and spacious SUV."
     },
     {
+        "id": 4,
         "type": "coupe",
         "brand": "Mazda",
         "model": "RX-8",
@@ -52,6 +56,7 @@
         "description": "A sporty and agile coupe."
     },
     {
+        "id": 5,
         "type": "hatchback",
         "brand": "Subaru",
         "model": "Impreza",
@@ -65,6 +70,7 @@
         "description": "A versatile and performance-oriented hatchback."
     },
     {
+        "id": 6,
         "type": "sedan",
         "brand": "Mitsubishi",
         "model": "Lancer Evolution",
@@ -78,6 +84,7 @@
         "description": "A high-performance and thrilling sedan."
     },
     {
+        "id": 7,
         "type": "SUV",
         "brand": "Toyota",
         "model": "Land Cruiser",
@@ -91,6 +98,7 @@
         "description": "A powerful and durable SUV."
     },
     {
+        "id": 8,
         "type": "sedan",
         "brand": "Lexus",
         "model": "IS 250",
@@ -104,6 +112,7 @@
         "description": "A luxurious and smooth sedan."
     },
     {
+        "id": 9,
         "type": "coupe",
         "brand": "Nissan",
         "model": "370Z",
@@ -117,6 +126,7 @@
         "description": "A powerful and sleek coupe."
     },
     {
+        "id": 10,
         "type": "hatchback",
         "brand": "Honda",
         "model": "Civic Type R",
@@ -130,6 +140,7 @@
         "description": "A high-performance and sporty hatchback."
     },
     {
+        "id": 11,
         "type": "sedan",
         "brand": "Infiniti",
         "model": "Q50",
@@ -143,6 +154,7 @@
         "description": "A premium and tech-savvy sedan."
     },
     {
+        "id": 12,
         "type": "SUV",
         "brand": "Mazda",
         "model": "CX-5",
@@ -156,6 +168,7 @@
         "description": "A compact and stylish SUV."
     },
     {
+        "id": 13,
         "type": "sedan",
         "brand": "Toyota",
         "model": "Crown",
@@ -169,6 +182,7 @@
         "description": "A luxurious and classic sedan."
     },
     {
+        "id": 14,
         "type": "coupe",
         "brand": "Honda",
         "model": "NSX",
@@ -182,6 +196,7 @@
         "description": "A legendary and high-performance coupe."
     },
     {
+        "id": 15,
         "type": "SUV",
         "brand": "Subaru",
         "model": "Forester",
@@ -195,6 +210,7 @@
         "description": "A rugged and reliable SUV."
     },
     {
+        "id": 16,
         "type": "sedan",
         "brand": "Mazda",
         "model": "Mazda6",
@@ -208,6 +224,7 @@
         "description": "A sleek and efficient sedan."
     },
     {
+        "id": 17,
         "type": "SUV",
         "brand": "Mitsubishi",
         "model": "Outlander",
@@ -221,6 +238,7 @@
         "description": "A spacious and versatile SUV."
     },
     {
+        "id": 18,
         "type": "sedan",
         "brand": "Nissan",
         "model": "Altima",
@@ -234,6 +252,7 @@
         "description": "A stylish and comfortable sedan."
     },
     {
+        "id": 19,
         "type": "coupe",
         "brand": "Toyota",
         "model": "86",
@@ -247,6 +266,7 @@
         "description": "A sporty and fun-to-drive coupe."
     },
     {
+        "id": 20,
         "type": "hatchback",
         "brand": "Mazda",
         "model": "Mazda3",
@@ -260,6 +280,7 @@
         "description": "A compact and efficient hatchback."
     },
     {
+        "id": 21,
         "type": "SUV",
         "brand": "Toyota",
         "model": "RAV4",
@@ -273,6 +294,7 @@
         "description": "A reliable and versatile SUV."
     },
     {
+        "id": 22,
         "type": "sedan",
         "brand": "Honda",
         "model": "City",
@@ -286,6 +308,7 @@
         "description": "A compact and efficient sedan."
     },
     {
+        "id": 23,
         "type": "coupe",
         "brand": "Nissan",
         "model": "Skyline GT-R",
@@ -299,6 +322,7 @@
         "description": "A legendary and high-performance coupe."
     },
     {
+        "id": 24,
         "type": "SUV",
         "brand": "Mitsubishi",
         "model": "Pajero",
@@ -312,6 +336,7 @@
         "description": "A rugged and durable SUV."
     },
     {
+        "id": 25,
         "type": "sedan",
         "brand": "Subaru",
         "model": "Legacy",
@@ -325,6 +350,7 @@
         "description": "A reliable and comfortable sedan."
     },
     {
+        "id": 26,
         "type": "hatchback",
         "brand": "Toyota",
         "model": "Yaris",
@@ -338,6 +364,7 @@
         "description": "A compact and efficient hatchback."
     },
     {
+        "id": 27,
         "type": "SUV",
         "brand": "Honda",
         "model": "CR-V",
@@ -351,6 +378,7 @@
         "description": "A spacious and reliable SUV."
     },
     {
+        "id": 28,
         "type": "sedan",
         "brand": "Nissan",
         "model": "Maxima",
@@ -364,6 +392,7 @@
         "description": "A powerful and stylish sedan."
     },
     {
+        "id": 29,
         "type": "coupe",
         "brand": "Lexus",
         "model": "RC 350",
@@ -377,6 +406,7 @@
         "description": "A luxurious and sporty coupe."
     },
     {
+        "id": 30,
         "type": "hatchback",
         "brand": "Mazda",
         "model": "2",

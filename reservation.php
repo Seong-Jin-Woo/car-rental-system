@@ -6,7 +6,7 @@
     </div>
 </div>
 <?php include('includes/footer.php'); ?>
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.js"></script> <!-- Add this line -->
 <script>
     // Get query parameters from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -27,13 +27,13 @@
                 <input type="date" name="end_date" id="end_date" required>
                 <p>Total Cost: $<span id="total-cost">0</span></p>
                 <label for="name">Name:</label>
-                <input type="text" name="name" required>
+                <input type="text" name="name" id="name" required>
                 <label for="mobile">Mobile:</label>
-                <input type="text" name="mobile" required>
+                <input type="text" name="mobile" id="mobile" required>
                 <label for="email">Email:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
                 <label for="license">Driver's License:</label>
-                <input type="text" name="license" required>
+                <input type="text" name="license" id="license" required>
                 <button type="submit">Reserve</button>
                 <button type="button" onclick="cancelReservation()">Cancel</button>
             </form>

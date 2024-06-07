@@ -53,7 +53,7 @@ function displayCars(cars) {
                 <h3>${car.model}</h3>
                 <p>$${car.price_per_day} per day</p>
                 <p>${car.availability ? 'Available' : 'Not Available'}</p>
-                <button onclick="rentCar(${car.id})" ${!car.availability ? 'disabled' : ''}>Rent</button>
+                <button type="button" onclick="rentCar(${car.id})" ${!car.availability ? 'disabled' : ''}>Rent</button>
             `;
             carGrid.appendChild(carDiv);
         });
@@ -110,24 +110,25 @@ function fetchCarsByCategory(category) {
 
 function rentCar(carId) {
     getCarById(carId).then(car => {
+        console.log('Car data:', car); // Debugging statement
         let pricePerDay = car.price_per_day;
         let rentalForm = `
             <form action="api/reservation.php" method="post">
-                <input type="hidden" name="carId" value="${carId}">
+                <input type="hidden" name="carId" id="carId" value="${car.id}">
                 <p>Car Model: ${car.brand} ${car.model}</p>
                 <p>Price per Day: $${pricePerDay}</p>
                 <label for="name">Name:</label>
-                <input type="text" name="name" required>
+                <input type="text" name="name" id="name" required>
                 <label for="mobile">Mobile:</label>
-                <input type="text" name="mobile" required>
+                <input type="text" name="mobile" id="mobile" required>
                 <label for="email">Email:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
                 <label for="license">Driver's License:</label>
-                <input type="text" name="license" required>
+                <input type="text" name="license" id="license" required>
                 <label for="start_date">Start Date:</label>
-                <input type="date" name="start_date" required>
+                <input type="date" name="start_date" id="start_date" required>
                 <label for="end_date">End Date:</label>
-                <input type="date" name="end_date" required>
+                <input type="date" name="end_date" id="end_date" required>
                 <input type="hidden" name="price" value="${pricePerDay}">
                 <button type="submit">Reserve</button>
             </form>
@@ -140,7 +141,7 @@ function getCarById(carId) {
     return fetch('data/cars.json')
         .then(response => response.json())
         .then(cars => {
-            return cars.find(car => car.id === carId);
+            return cars.find(car => car.id === parseInt(carId));
         })
         .catch(error => console.error('Error:', error));
 }

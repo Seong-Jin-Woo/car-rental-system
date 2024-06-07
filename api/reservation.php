@@ -10,22 +10,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $license = $_POST['license'];
     $startDate = $_POST['start_date'];
     $endDate = $_POST['end_date'];
+    $quantity = $_POST['quantity']; // Added quantity
     $price = $_POST['price'];
 
-    $stmt = $pdo->prepare("INSERT INTO orders (user_email, rent_start_date, rent_end_date, car_id, price) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$email, $startDate, $endDate, $carId, $price]);
+    // Calculate total cost
+    $startDateObj = new DateTime($startDate);
+    $endDateObj = new DateTime($endDate);
+    $interval = $startDateObj->diff($endDateObj);
+    $days = $interval->days;
+    $totalCost = $quantity * $price * $days;
 
-    $_SESSION['reservation'] = [
-        'carId' => $carId,
-        'name' => $name,
-        'mobile' => $mobile,
-        'email' => $email,
-        'license' => $license,
-        'start_date' => $startDate,
-        'end_date' => $endDate,
-        'price' => $price
-    ];
+    try {
+        $stmt = $pdo->prepare("INSERT INTO reservations (car_id, name, mobile, email, license, start_date, end_date, quantity, total_cost) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$carId, $name, $mobile, $email, $license, $startDate, $endDate, $quantity, $totalCost]);
 
-    header('Location: ../confirm.php');
+        $_SESSION['reservation'] = [
+            'carId' => $carId,
+            'name' => $name,
+            'mobile' => $mobile,
+            'email' => $email,
+            'license' => $license,
+            'start_date' => $startDate,
+            'end_date' => $endDate,
+            'quantity' => $quantity,
+            'total_cost' => $totalCost
+        ];
+
+        header('Location: ../confirm.php');
+        exit();
+    } catch (Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
 }
 ?>
